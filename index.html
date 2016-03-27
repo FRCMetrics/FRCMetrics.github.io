@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<script>
+			function nIQ(s, i) {
+				var returnMe;
+				var isIn = 0;
+				var j = 0;
+				while (j < s.length) {
+					returnMe += s[j];
+					j++;
+				}
+				return returnMe;
+			}
+			$( document ).ready(function() {
+				$.ajax({
+				    	url: 'http://www.thebluealliance.com/api/v2/team/frc254?X-TBA-App-Id=FRCMetrics:FRCMetrics:0',
+				    	type: 'GET',
+				        success: function() { alert("Success"); },
+				    	error: function() { alert('Failed!'); }
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>Paragraph</p>
+	</body>
+</html>

@@ -23,8 +23,8 @@
 				});*/
     			$.get("http://www.thebluealliance.com/api/v2/team/frc254?X-TBA-App-Id=FRCMetrics:FRCMetrics:0", function(data, status){
         			alert("Data: " + data + "\nStatus: " + status);
-        			$('#changeMe').innerHTML = data;
-        			$('#changeMe2').text = data;
+        			$( "#changeMe" ).html = data;
+        			$( "#changeMe2" ).text = data;
     			});
 			});
 		</script>

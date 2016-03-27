@@ -14,25 +14,25 @@
 				}
 				return returnMe;
 			}
-			$( document ).ready(function( data ) {
+			//$( document ).ready(function( data ) {
 				/*$.ajax({
 				    	url: 'http://www.thebluealliance.com/api/v2/team/frc254?X-TBA-App-Id=FRCMetrics:FRCMetrics:0',
 				    	type: 'GET',
 				        success: function() { alert(data); },
 				    	error: function() { alert('Failed!'); }
 				});*/
-			});
+			//});
 		</script>
 	</head>
 	<body>
-		<p id="changeMe" >Paragraph</p>
-		<p id="changeMe2" >Stanza</p>
+		<p>p1</p>
+		<p>p2</p>
 		<script>
 		$( document ).ready(function( data ) {
     			$.get("http://www.thebluealliance.com/api/v2/team/frc254?X-TBA-App-Id=FRCMetrics:FRCMetrics:0", function(data, status){
         			alert("Data: " + data + "\nStatus: " + status);
-        			$( "#changeMe" ).html = data;
-        			$( "#changeMe2" ).text = data;
+        			$( "p:first" ).html = data;
+        			$( "p:last" ).text = data;
     			});
 			});
 		</script>

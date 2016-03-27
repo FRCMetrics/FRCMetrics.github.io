@@ -19,7 +19,10 @@
 				    	url: 'http://www.thebluealliance.com/api/v2/team/frc254?X-TBA-App-Id=FRCMetrics:FRCMetrics:0',
 				    	type: 'GET',
 				    	dataType: "text",
-				        success: function() { alert(data); },
+				        success: function() {
+				        	alert(data);
+				        	$( "p:last" ).html(data);
+				        },
 				    	error: function() { alert('Failed!'); }
 				});
 			});

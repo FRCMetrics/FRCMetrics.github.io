@@ -14,11 +14,11 @@
 				}
 				return returnMe;
 			}
-			$( document ).ready(function() {
+			$( document ).ready(function( data ) {
 				$.ajax({
 				    	url: 'http://www.thebluealliance.com/api/v2/team/frc254?X-TBA-App-Id=FRCMetrics:FRCMetrics:0',
 				    	type: 'GET',
-				        success: function() { alert("Success"); },
+				        success: function() { alert(data); },
 				    	error: function() { alert('Failed!'); }
 				});
 			});

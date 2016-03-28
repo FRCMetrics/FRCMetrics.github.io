@@ -24,7 +24,7 @@
 			var print = '';
 			var response = $( "#response" ).html();
 			for (i = 0; i < response.length(); i++) {
-				if(response[i] == "{" || response[i] == "}") {
+				if(response.charAt(i) == "{" || response.charAt(i) == "}") {
 					var front = response.substr(0,i);
 					var back = response.substring(i);
 					response - front.concat("\n", back);

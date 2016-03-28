@@ -17,5 +17,20 @@
 	</head>
 	<body>
 		<p id="response">response</p>
+		<p id="indentedResponse">indented response</p>
 	</body>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			var print = '';
+			var response = $( "#response" ).html();
+			for (i = 0; i < response.length(); i++) {
+				if(response[i] == "{" || response[i] == "}") {
+					var front = response.substr(0,i);
+					var back = response.substring(i);
+					response - front.concat("\n", back);
+				}
+			}
+			$( "#indentedResponse" ).html(print);
+		});
+	</script>
 </html>

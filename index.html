@@ -10,18 +10,19 @@
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
 		<script type="text/javascript">
-		function getData() {
-			$.ajax({
-			    	url: 'http://www.thebluealliance.com/api/v2/event/2016miwat/matches?X-TBA-App-Id=FRCMetrics:FRCMetrics:0',
-			    	type: 'GET',
-			    	dataType: 'text'
-			}).done(function(data) {
-				data = data.trim();
-				data = data.slice(1, -1); //Remove square brackets around list results
-				$("#output").html(data);
-			});
-		}
-
+			function getData() {
+				$.ajax({
+				    	url: 'http://www.thebluealliance.com/api/v2/event/2016miwat/matches?X-TBA-App-Id=FRCMetrics:FRCMetrics:0',
+				    	type: 'GET',
+				    	dataType: 'text'
+				}).done(function(data) {
+					data = data.trim();
+					data = data.slice(1, -1); //Remove square brackets around list results
+					$("#output").html(data);
+				});
+			}
+		</script>
+		<script type="text/javascript">
 		function indentFunc(i) {
 			var print = "";
 			for (j = 0; j < i; j++) {
@@ -64,8 +65,12 @@
 
 		//Create indented response
 		$( document ).ready(function() {
+<<<<<<< HEAD
 			getData();
 			//alert("ay");
+=======
+			alert("ay");
+>>>>>>> parent of 58ab982... new attempt
 			//Indent data
 			var print = '';
 			print += "<p>";

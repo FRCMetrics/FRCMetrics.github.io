@@ -18,7 +18,7 @@
 				}).done(function(data) {
 					data = data.trim();
 					data = data.slice(1, -1); //Remove square brackets around list results
-					return data;
+					$("#output").html(data);
 				});
 			}
 		</script>
@@ -65,13 +65,13 @@
 
 		//Create indented response
 		$( document ).ready(function() {
-			$( "#output" ).html("TEXT2");
+			alert("ay");
 			//Indent data
 			var print = '';
 			print += "<p>";
 			var indent = 0;
-			$("#output").html(getData());
 			var response = $("#output").html();
+			alert("ay2");
 			for (i = 0; i < response.length; i++) {
 				if(response.charAt(i) == "{") {
 				//if(response.charAt(i) == "{" || response.charAt(i) == "[") {

@@ -65,12 +65,12 @@
 
 		//Create indented response
 		$( document ).ready(function() {
-			$( "#output" ).html("TEXT1");
+			$( "#output" ).html("TEXT2");
 			//Indent data
 			var print = '';
 			print += "<p>";
 			var indent = 0;
-			$("#ouptput").html(getData());
+			$("#output").html(getData());
 			var response = $("#output").html();
 			for (i = 0; i < response.length; i++) {
 				if(response.charAt(i) == "{") {

@@ -17,14 +17,13 @@
 				    	dataType: 'text'
 				}).done(function(data) {
 					data = data.trim();
-					data = data.slice(1, -1);
+					data = data.slice(1, -1); //Remove square brackets around list results
 					$( "#output" ).html(data);
-					//REMOVE SQUARE BRACKETS FROM OUTEREST RESPONSE
 				});
 			});
 		</script>
 		<script type="text/javascript">
-		/*function indentFunc(i) {
+		function indentFunc(i) {
 			var print = "";
 			for (j = 0; j < i; j++) {
 				print += "&nbsp&nbsp&nbsp&nbsp&nbsp";
@@ -110,7 +109,7 @@
 					$( this ).remove();
 				}
 			});
-		});*/
+		});
 	</script>
 	</head>
 	<body id="output"></body>

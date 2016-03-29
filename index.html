@@ -97,7 +97,9 @@
 				} else {
 					print += response.charAt(i);
 				}
-				$( "#output" ).html(i);
+				if (i % 5000 = 0) {
+					alert(i);
+				}
 			}
 			print += "</p>";
 			$( "#output" ).html(print); //Output indented response

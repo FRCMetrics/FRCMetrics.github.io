@@ -76,6 +76,7 @@
 				data = data.slice(1, -1); //Remove square brackets around list results
 				//$( "#output" ).html(data);
 				response = data;
+				$( "#output" ).html("0");
 			});
 
 			//Indent data
@@ -106,6 +107,7 @@
 				} else {
 					print += response.charAt(i);
 				}
+				$( "#output" ).html(i);
 			}
 			print += "</p>";
 			$( "#output" ).html(print); //Output indented response

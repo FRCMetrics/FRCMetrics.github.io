@@ -10,7 +10,7 @@
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
 		<script type="text/javascript">
-			/*$( document ).ready(function() {
+			function getData() {
 				$.ajax({
 				    	url: 'http://www.thebluealliance.com/api/v2/event/2016miwat/matches?X-TBA-App-Id=FRCMetrics:FRCMetrics:0',
 				    	type: 'GET',
@@ -18,9 +18,9 @@
 				}).done(function(data) {
 					data = data.trim();
 					data = data.slice(1, -1); //Remove square brackets around list results
-					$( "#output" ).html(data);
+					return data;
 				});
-			});*/
+			}
 		</script>
 		<script type="text/javascript">
 		function indentFunc(i) {
@@ -65,19 +65,7 @@
 
 		//Create indented response
 		$( document ).ready(function() {
-			var response = '';
-			//Get data
-			$.ajax({
-			    	url: 'http://www.thebluealliance.com/api/v2/event/2016miwat/matches?X-TBA-App-Id=FRCMetrics:FRCMetrics:0',
-			    	type: 'GET',
-			    	dataType: 'text'
-			}).done(function(data) {
-				data = data.trim();
-				data = data.slice(1, -1); //Remove square brackets around list results
-				//$( "#output" ).html(data);
-				response = data;
-				$( "#output" ).html("0");
-			});
+			var response = getData();
 			$( "#output" ).html("TEXT");
 			//Indent data
 			var print = '';

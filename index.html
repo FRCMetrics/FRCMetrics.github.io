@@ -65,6 +65,7 @@
 
 		//Create indented response
 		$( document ).ready(function() {
+			var resposnse = '';
 			//Get data
 			$.ajax({
 			    	url: 'http://www.thebluealliance.com/api/v2/event/2016miwat/matches?X-TBA-App-Id=FRCMetrics:FRCMetrics:0',
@@ -73,14 +74,15 @@
 			}).done(function(data) {
 				data = data.trim();
 				data = data.slice(1, -1); //Remove square brackets around list results
-				$( "#output" ).html(data);
+				//$( "#output" ).html(data);
+				response = data;
 			});
 
 			//Indent data
 			var print = '';
 			print += "<p>";
 			var indent = 0;
-			var response = $( "#output" ).html();
+			//var response = $( "#output" ).html();
 			for (i = 0; i < response.length; i++) {
 				if(response.charAt(i) == "{") {
 				//if(response.charAt(i) == "{" || response.charAt(i) == "[") {

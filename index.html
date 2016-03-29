@@ -65,13 +65,13 @@
 		//Create indented response
 		$( document ).ready(function() {
 			getData();
-			alert("ay");
+			//alert("ay");
 			//Indent data
 			var print = '';
 			print += "<p>";
 			var indent = 0;
 			var response = $("#output").html();
-			alert("ay2");
+			//alert("ay2");
 			for (i = 0; i < response.length; i++) {
 				if(response.charAt(i) == "{") {
 				//if(response.charAt(i) == "{" || response.charAt(i) == "[") {
@@ -95,14 +95,14 @@
 				} else {
 					print += response.charAt(i);
 				}
-				$( "#output" ).html("FOR");
+				//$( "#output" ).html("FOR");
 			}
 			print += "</p>";
 			$( "#output" ).html(print); //Output indented response
 		});
 
 		// Strip indented response to only defenses
-		/*$( document ).ready(function() {
+		$( document ).ready(function() {
 			var line = "";
 			$("p").each(function() {
 				line = $( this ).html();
@@ -110,7 +110,7 @@
 					$( this ).remove();
 				}
 			});
-		});*/
+		});
 	</script>
 	</head>
 	<body id="output"></body>

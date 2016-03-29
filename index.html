@@ -99,17 +99,15 @@
 			}
 			print += "</p>";
 			$( "#output" ).html(print); //Output indented response
-		//});
-
-		// Strip indented response to only defenses
-		//$( document ).ready(function() {
+			alert("here!");
+			// Strip indented response to only defenses
 			var line = "";
 			$("p").each(function() {
 				line = $( this ).html();
 				if(line.indexOf("\"position2\"") == -1) {
 					$( this ).remove();
 				}
-			});
+			})
 		});
 	</script>
 	</head>

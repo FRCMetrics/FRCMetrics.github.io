@@ -78,7 +78,7 @@
 				response = data;
 				$( "#output" ).html("0");
 			});
-
+			$( "#output" ).html("TEXT");
 			//Indent data
 			var print = '';
 			print += "<p>";
@@ -107,7 +107,7 @@
 				} else {
 					print += response.charAt(i);
 				}
-				$( "#output" ).html(i);
+				$( "#output" ).html("FOR");
 			}
 			print += "</p>";
 			$( "#output" ).html(print); //Output indented response

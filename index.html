@@ -70,8 +70,8 @@
 			var print = '';
 			print += "<p>";
 			var indent = 0;
-			var response = '';
-			response = String(getData());
+			$("#ouptput").html(getData());
+			var response = $("#output").html();
 			for (i = 0; i < response.length; i++) {
 				if(response.charAt(i) == "{") {
 				//if(response.charAt(i) == "{" || response.charAt(i) == "[") {
